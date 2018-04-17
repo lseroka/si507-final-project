@@ -1,0 +1,75 @@
+Commands available:
+
+delegates
+	Description: Returns list or chart (depending on parameter) of delegates
+	to the multiple continental congresses. 
+
+	Options:
+	* list
+	- Description: Returns a list of all of the delegates to the original 
+	13 states; names return in alphabetical order
+
+	* list <name of state>
+	- Description: Returns a list of delegates for a specific state;
+	names returned in alphabetical order
+
+	* chart
+	- Description: Returns a graph of the number of delegates there 
+	were for each of the original 13 states 
+
+signed
+	Description: Returns a pie chart of the number of delegates who signed:
+		- Declaration of Independence only
+		- Articles of Confederation only
+		- Constitution only
+		- Declaration of Independence and Article of Confederation
+		- Declaration of Independence and Constitution
+		- Articles of Confederation and Constitution
+		- Declaration of Independence, Articles of Confederation,
+		    and Constitution
+		- No founding document
+
+	Options:
+	* chart
+	- Description: Returns a pie chart of the number of delegates 
+	who signed the mentioned documents
+
+	* chart <name of state>
+	- Description: Returns a pie chart of the number of delegates for 
+	a specific state who signed the mentioned documents
+
+scores
+	Description: Returns a chart of the average readability score for all
+	of the items in the Digital Public Library of America related to one
+	delegate. The lower the number, the easier the set of archival materials
+	are to interpret. The average was taken from up to 10 archival items 
+	returned for each delegate. 
+
+	Options:
+	* chart
+	- Description: Returns a chart with the average score for all of the
+	delegates. 
+
+	* chart <name of state>
+	- Description: Returns a chart with the average score for all of the
+	delegates for a specific state [Recommended search]
+
+repos
+	Description: Returns a list or chart of the repositories which have 
+	archival materials related to the delegates. These are only repositories 
+	that have partnered with institutions from across the country and have
+	provided access to the Digital Public Library of America. The list of
+	repositories was taken from up to 10 archival items returned for each
+	delegate. 
+
+	Options:
+	* list
+	- Description: Returns a list of all of the repositories with the number
+	of items from each repository; listed by most items to least items
+
+	* chart
+	- Description: Returns a graph of all of the repositories with the number 
+	of items from each repository
+
+exit
+	Exits the program
