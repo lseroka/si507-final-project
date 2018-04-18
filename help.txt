@@ -73,3 +73,5 @@ repos
 
 exit
 	Exits the program
+help
+	This help text

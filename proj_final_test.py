@@ -59,7 +59,7 @@ class TestDatabase(unittest.TestCase):
         results = cur.execute(sql)
         result_list = results.fetchall()
         self.assertIn(('Bookplates',), result_list)
-        self.assertEqual(len(result_list), 22)
+        self.assertEqual(len(result_list), 23)
 
         sql = '''
             SELECT COUNT(*)
@@ -67,7 +67,7 @@ class TestDatabase(unittest.TestCase):
         '''
         results = cur.execute(sql)
         count = results.fetchone()[0]
-        self.assertEqual(count, 2974)
+        self.assertEqual(count, 2977)
 
         conn.close()
 
@@ -99,16 +99,16 @@ class TestDateProcessing(unittest.TestCase):
 
     def test_data_processing_avg_ratings(self):
         x = data_processing_avg_ratings("New York")
-        self.assertEqual(x["John Alsop"], 2.8)
+        self.assertEqual(x["John Alsop"], 2.2)
         y = data_processing_avg_ratings("New Jersey")
         self.assertEqual(y["John Stevens"], 5.2)
 
 
     def test_data_processing_repository_count(self):
         x = data_processing_repository_count()
-        self.assertEqual(x["Smithsonian Institution"], 139)
+        self.assertEqual(x["Smithsonian Institution"], 129)
         y = list(x.keys())
-        self.assertEqual(len(y), 31)
+        self.assertEqual(len(y), 29)
 
 
 class TestVisuals(unittest.TestCase):

@@ -10,7 +10,6 @@ import sqlite3
 
 CACHE_FNAME = 'delegates_cache.json'
 DBNAME = 'delegates.db'
-google_places_key = secrets.google_places_key
 dpla_key = secrets.dpla_key
 
 try:
@@ -262,7 +261,6 @@ def insert_archive_data():
             conn.commit()
     conn.close()
      
-
 ################################# DATA PROCESSING #######################################
 
 def data_processing_delegates():
@@ -303,8 +301,7 @@ def data_processing_state_count():
 
     return state_count_dic
 
-def data_processing_sign_which_docs(state):
-    #want to get how many of each signing categories fall into 
+def data_processing_sign_which_docs(state): 
     conn = sqlite3.connect(DBNAME)
     cur = conn.cursor()
 
